@@ -1,0 +1,8 @@
+version: '3'
+services:
+  katas:
+    build: . 
+    container_name: katas
+    command: ./run.sh # when container is started it runs the script
+    volumes:
+      - ./scripts:/app #  mounts the whole host app folder (.) to a folder on a container (/app)

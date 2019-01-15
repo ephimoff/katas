@@ -5,8 +5,8 @@ The idea is to practice katas and learn/refresh some languages
 
 ## Progress in Python
 
-- [ ] 01: Supermarket
-- [ ] 02: Karate
+- [x] 01: Supermarket. _Turns out it involves no coding._
+- [ ] 02: Karate Chop
 - [ ] 03: How Big? How Fast?
 - [ ] 04: Data Munging
 - [ ] 05: Bloom Filters
