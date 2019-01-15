@@ -1,0 +1,13 @@
+version: '3'
+services:
+  kata01:
+    build: . 
+    container_name: kata01 
+    command: python kata01.py # when container is started it runs the script
+    # environment:
+    #   NODE_ENV: staging
+    #   DB_HOST: flibusta_db
+    # ports:
+    #   - '3000:3000'
+    volumes:
+      - ./scripts:/app #  mounts the whole host app folder (.) to a folder on a container (/app)

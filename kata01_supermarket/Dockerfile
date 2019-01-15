@@ -4,6 +4,6 @@ ENV INSTALL_PATH /app
 RUN mkdir -p $INSTALL_PATH
 WORKDIR $INSTALL_PATH
 
-COPY . .
+# COPY . .
 
-CMD python script.py
+# CMD python script.py
