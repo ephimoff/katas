@@ -1,10 +1,25 @@
 # Karate Chop
 import unittest
 
-print("Hello from Kata 02")
+print("Kata 02 results:")
+
+# Write a binary chop method that takes an integer search target and 
+# a sorted array of integers. It should return the integer index of 
+# the target in the array, or -1 if the target is not in the array. 
+# ---
+# Assumptions:
+# The array has less than 100,000 elements. 
+# Time and memory performance are not issues 
 
 def chop( x, array ):
-  return
+  # print("Looking for %s in this array: %s" % (x, array))
+  res = -1
+  if len(array) > 0:
+    for index in range(len(array)):
+      # print("Current index is %s and the value is %s" % (index, array[index]))
+      if array[index] == x:
+        res = index
+  return res
 
 # Unit testing
 class ChopTestCase(unittest.TestCase):
