@@ -11,15 +11,42 @@ print("Kata 02 results:")
 # The array has less than 100,000 elements. 
 # Time and memory performance are not issues 
 
+# iterative approach:
+# def chop( x, array ):
+#   # print("Looking for %s in this array: %s" % (x, array))
+#   res = -1
+#   if len(array) > 0:
+#     for index in range(len(array)):
+#       # print("Current index is %s and the value is %s" % (index, array[index]))
+#       if array[index] == x:
+#         res = index
+#   return res
+
+# Logarithmic approach:
+
+# split array in half
+def split_list(array):
+  half = len(array)//2
+  # print("Array: %s . Split as left: %s and right: %s" % (array, array[:half], array[half:]))
+  return array[:half], array[half:]
+  # return
+
+# split_list([1, 3, 5])
+# split_list([1])
+# split_list([])
+# split_list([1, 3, 5, 7])
+
 def chop( x, array ):
-  # print("Looking for %s in this array: %s" % (x, array))
   res = -1
   if len(array) > 0:
-    for index in range(len(array)):
-      # print("Current index is %s and the value is %s" % (index, array[index]))
-      if array[index] == x:
-        res = index
+    left, right = split_list(array)
+    if left[0] == x:
+      res = 0
+
   return res
+
+
+
 
 # Unit testing
 class ChopTestCase(unittest.TestCase):
